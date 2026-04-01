@@ -7,7 +7,7 @@
 
 body {
   font-family: "Inter", sans-serif;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
+  background-color: #0f172a;
 }
 
 .container {
@@ -336,21 +336,42 @@ template {
   display: none;
 }
 
-.navbar {
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 10px 30px;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+.header.scrolled::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px; /* juda ingichka */
+  background: linear-gradient(to right, transparent 0%, #fff 10%, #fff 90%, transparent 100%);
+}
+.header .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.navbar .logo {
+.header .navbar .logo {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.navbar .logo img {
+.header .navbar .logo img {
   width: 50px;
   cursor: pointer;
 }
-.navbar .logo h4 {
+.header .navbar .logo h4 {
   font-size: 20px;
   font-weight: 600;
   font-family: "Inter", sans-serif;
@@ -358,15 +379,15 @@ template {
   transition: all 0.3s;
   cursor: pointer;
 }
-.navbar .logo h4:hover {
+.header .navbar .logo h4:hover {
   color: #028fcf;
 }
-.navbar .nav_text ul {
+.header .navbar .nav_text ul {
   display: flex;
   align-items: center;
   gap: 50px;
 }
-.navbar .nav_text ul li a {
+.header .navbar .nav_text ul li a {
   font-size: 18px;
   font-weight: 500;
   font-family: "Inter", sans-serif;
@@ -378,14 +399,14 @@ template {
   transition: all 0.3s;
   cursor: pointer;
 }
-.navbar .nav_text ul li a:hover {
+.header .navbar .nav_text ul li a:hover {
   color: #028fcf;
   border: 1px solid #028fcf;
 }
-.navbar .nav_text ul li a span {
+.header .navbar .nav_text ul li a span {
   font-size: 16px;
 }
-.navbar .theme button {
+.header .navbar .theme button {
   padding: 10px 20px;
   border-radius: 30px;
   display: flex;
@@ -400,11 +421,59 @@ template {
   transition: all 0.3s;
   cursor: pointer;
 }
-.navbar .theme button:hover {
+.header .navbar .theme button:hover {
   color: #028fcf;
 }
-.navbar .theme button i {
+.header .navbar .theme button i {
   font-size: 20px;
+}
+
+.main .html_text {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  margin-top: 200px;
+}
+.main .html_text .img_html {
+  width: 380px;
+  border: 1px solid #fff;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+}
+.main .html_text .img_html img {
+  width: 300px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.main .html_text .img_html img:hover {
+  transform: scale(1.1);
+}
+.main .html_text .html_img h4 {
+  font-size: 45px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  line-height: 1.3;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.main .html_text .html_img h4:hover {
+  color: #028fcf;
+}
+.main .html_text .html_img p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.8;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.main .html_text .html_img p:hover {
+  color: #028fcf;
 }
 
 /*# sourceMappingURL=style.css.map */
