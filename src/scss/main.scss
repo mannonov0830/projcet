@@ -1,6 +1,7 @@
 // base fayyelar
 @use "./base/global";
 @use "./base/reset";
+@use "./base/normalise";
 
 // components fayyelar
 @use "./components/button";
