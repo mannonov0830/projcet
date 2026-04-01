@@ -1,0 +1,16 @@
+// base fayyelar
+@use "./base/global";
+@use "./base/reset";
+
+// components fayyelar
+@use "./components/button";
+@use "./components/cart";
+
+// layout fayyelar
+@use "./layout/footer";
+@use "./layout/header";
+
+// pages fayyelar
+@use "./pages/about";
+@use "./pages/home";
+
