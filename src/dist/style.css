@@ -447,20 +447,30 @@ template {
   gap: 50px;
 }
 .header .navbar .nav_text ul li a {
+  position: relative;
   font-size: 18px;
   font-weight: 500;
   font-family: "Inter", sans-serif;
-  width: 170px;
-  height: 60px;
-  padding: 10px 20px;
-  border-radius: 30px;
-  border: 1px solid transparent;
-  transition: all 0.3s;
-  cursor: pointer;
+  padding: 10px 0;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.header .navbar .nav_text ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
 }
 .header .navbar .nav_text ul li a:hover {
   color: #028fcf;
-  border: 1px solid #028fcf;
+}
+.header .navbar .nav_text ul li a:hover::after {
+  width: 100%;
 }
 .header .navbar .nav_text ul li a span {
   font-size: 16px;
@@ -482,6 +492,7 @@ template {
 }
 .header .navbar .theme button:hover {
   color: #028fcf;
+  transform: translateY(-10px);
 }
 .header .navbar .theme button i {
   font-size: 20px;
