@@ -394,10 +394,29 @@ template {
 .grid .grid_flex .box h4 a:hover {
   color: #0072ff;
 }
-.grid i {
+.grid .user {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  gap: 10px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.grid .user i {
+  font-size: 15px;
+  font-weight: 300;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  letter-spacing: 3px;
+  text-align: center;
+}
+.grid .user i:nth-child(1) {
   font-size: 17px;
   font-weight: 400;
+}
+.grid .user p {
   color: #fff;
+  font-size: 17px;
 }
 
 .header {
