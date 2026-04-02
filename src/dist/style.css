@@ -394,6 +394,11 @@ template {
 .grid .grid_flex .box h4 a:hover {
   color: #0072ff;
 }
+.grid i {
+  font-size: 17px;
+  font-weight: 400;
+  color: #fff;
+}
 
 .header {
   position: fixed;
